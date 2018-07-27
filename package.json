@@ -1,0 +1,19 @@
+{
+  "name": "gcp-shipping-pricing",
+  "version": "1.0.0",
+  "description": "Backend service for returning shipping prices. Part of the GCP tutorial series",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akohen/gcp-shipping-pricing.git"
+  },
+  "author": "Alexandre KOHEN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akohen/gcp-shipping-pricing/issues"
+  },
+  "homepage": "https://github.com/akohen/gcp-shipping-pricing#readme"
+}
