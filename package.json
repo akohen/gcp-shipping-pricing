@@ -4,6 +4,9 @@
   "description": "Backend service for returning shipping prices. Part of the GCP tutorial series",
   "main": "index.js",
   "scripts": {
+    "dev": "babel-watch src/index.js",
+    "start": "node dist/index.js",
+    "build": "npx babel src -d dist",
     "test": "npx jest"
   },
   "repository": {
@@ -15,5 +18,48 @@
   "bugs": {
     "url": "https://github.com/akohen/gcp-shipping-pricing/issues"
   },
-  "homepage": "https://github.com/akohen/gcp-shipping-pricing#readme"
+  "homepage": "https://github.com/akohen/gcp-shipping-pricing#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.0",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-watch": "^2.0.7",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "jest": "^23.4.1"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "no-console": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "src/*.test.js"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  }
 }
