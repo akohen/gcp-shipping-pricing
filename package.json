@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "babel-watch src/index.js",
     "start": "node dist/index.js",
-    "build": "npx babel src -d dist",
+    "build": "npx babel src -d dist --ignore 'src/**/*.test.js'",
     "test": "npx jest"
   },
   "repository": {
@@ -35,7 +35,14 @@
   },
   "babel": {
     "presets": [
-      "@babel/preset-env"
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
     ]
   },
   "eslintConfig": {
