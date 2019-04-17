@@ -16,3 +16,4 @@
 # Node.js dependencies:
 node_modules/
 src
+__mocks__/

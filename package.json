@@ -61,5 +61,7 @@
       }
     ]
   },
-  "eslintIgnore": ["dist/*"]
+  "eslintIgnore": [
+    "dist/*"
+  ]
 }
